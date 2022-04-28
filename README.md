@@ -1,15 +1,8 @@
 # openssl-selfsigned-certgen
 Create openssl self signed certs
 
-
-## Edit cert_ext.cnf.template
-Customize your cert by editing the template config file for openssl. [cert_ext.cnf.template](cert_ext.cnf.template)
-
-## Run
-    ./create-ssl-cert.sh -cn test.example.com
-
 ## Overview
-The script generates a openssl certificate and a fullchain.pem certificate. (The fullchain.pem is basically the concatenation of the cert + key)
+The script [create-ssl-cert.sh](create-ssl-cert.sh) generates a openssl certificate and a fullchain.pem certificate. (The fullchain.pem is basically the concatenation of the cert + key)
 
 The certificates are placed in a certs folder like this:
 
@@ -18,6 +11,12 @@ The certificates are placed in a certs folder like this:
     ├── server.crt
     ├── server.csr
     └── server.key
+
+## Edit cert_ext.cnf.template
+Customize your cert by editing the template config file for openssl. [cert_ext.cnf.template](cert_ext.cnf.template)
+
+## Run
+    ./create-ssl-cert.sh -cn test.example.com
 
 ## Check the cert
 
