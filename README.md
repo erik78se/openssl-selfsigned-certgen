@@ -1,11 +1,15 @@
 # openssl-selfsigned-certgen
 Create openssl self signed certs
 
+
+## Edit cert_ext.cnf.template
+Customize your cert by editing the template config file for openssl. [cert_ext.cnf.template](cert_ext.cnf.template)
+
 ## Run
     ./create-ssl-cert.sh -cn test.example.com
 
 ## Overview
-The repo has a script that generates a single openssl certificate and corresponding .key and a fullchain.pem certificate chain. (The fullchain.pem is basically the concatenation of the cert + key)
+The script generates a openssl certificate and a fullchain.pem certificate. (The fullchain.pem is basically the concatenation of the cert + key)
 
 The certificates are placed in a certs folder like this:
 
@@ -14,6 +18,12 @@ The certificates are placed in a certs folder like this:
     ├── server.crt
     ├── server.csr
     └── server.key
+
+## Check the cert
+
+You can inspect the cert you created like this:
+
+    openssl x509 -text -noout -in certs/server.crt 
 
 ## Use with juju haproxy charm
 If you like to try it out, use this charm https://charmhub.io/microsample
