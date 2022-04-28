@@ -1,6 +1,9 @@
 # openssl-selfsigned-certgen
 Create openssl self signed certs
 
+## Run
+    ./create-ssl-cert.sh -cn test.example.com
+
 ## Overview
 The repo has a script that generates a single openssl certificate and corresponding .key and a fullchain.pem certificate chain. (The fullchain.pem is basically the concatenation of the cert + key)
 
