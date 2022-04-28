@@ -1,0 +1,15 @@
+[req]
+default_bit = 4096
+distinguished_name = req_distinguished_name
+prompt = no
+
+[req_distinguished_name]
+countryName=SE
+stateOrProvinceName=Stockholm Region
+localityName=Stockholm
+organizationName=Dwellir AB
+organizationalUnitName=Dwellir AB
+emailAddress=security@dwellir.com
+
+
+
